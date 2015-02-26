@@ -5,3 +5,31 @@ array of colors:{1,2,3,4,5,6}
 	4	blue
 	5	pink
 	6	black
+
+array of faces:
+{
+	//front face
+	{0,0,0},{1,0,0},{2,0,0},
+	{0,1,0},{1,1,0},{2,1,0},
+	{0,2,0},{1,2,0},{2,2,0},
+
+	//back face
+	{0,0,2},{1,0,2},{2,0,2},
+	{0,1,2},{1,1,2},{2,1,2},
+	{0,2,2},{1,2,2},{2,2,2},
+
+	//right face
+	//left face
+	//top face
+	//bottom face
+
+}
+
+array of cubes:
+total 27 cubes (8 corner cube + 12 edge cube + 6 center cube + 1 inner cube)
+each cube be either corner cube, edge cube or center cube
+corner cube has 3 side painted, edge cube has 2 sid paited, center cube has 1 side painted
+
+when we rotate one face of rubic cube, total 8 cube changes position
+
+we have 16 vertices in each face
