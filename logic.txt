@@ -67,3 +67,60 @@ dir - 2 values (clock, anti-clock)
 
 according to above argument Cube class decide which faces and 
 which lines should be operated/changed by rotate operation
+
+
+-----------------------------------------------------------------------------------
+
+While rotation operation one out of nine plate rotate clock or anti-clock
+direction. (2*9 = 18 possible operation)
+
+While we rotate one plate, actually we have series of copy operation for colors
+of line to line.
+Four lines of four faces are taking place of others sequencially.
+
+Plate Pi(i>=1 & i <= 9) rotate
+f1.i > f2.i >f3.i>f4.i>f1.i
+> operator may be consider shift
+= operator may also be thought of 
+
+Line& operator = (Line& l)
+{	
+	Line temp;
+	temp = this
+	this.1 = l.1
+	this.2 = l.2
+	this.3 = l.3
+	return temp
+}
+
+See temp is necessary otherwise object being copied to loses its value.
+
+#define		RED				0
+#define		YELLOW			1
+#define		BLUE			2
+#define		GREEN			3
+#define		PINK			4
+#define		BLACK			5
+
+#define		CUBE_SIZE		3
+
+#define		CLOCK_DIR		1
+#define		ANTICLOCK_DIR	2
+
+
+Class RubicCube
+
+public:
+	void DrawCube();
+	void RotateCube();
+	void AnimatePlateRotation();
+	
+	
+	void RotatePlate(int axis,int dist,int dir);
+	void TraceCube();
+	void RandomizeCube();
+	bool IsComplete();
+	bool InitializeCube();
+
+private:	
+	int m_arrCubeElement[6][3][3];
