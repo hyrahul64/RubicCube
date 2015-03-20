@@ -49,4 +49,21 @@ rotation type along x,y,z in clock-anticlock wise
 
 we have to define data structure for state such that applying operation
 on it is easy and put it in another state.
+-----------------------------------------------------------
+class Cubic
+class Face
+Class Line
 
+Cubic contains 6 Face object
+Face contains 3 Line object
+
+Face class may have type variable to uniquely identifies itself.
+Line class may have type variable to uniquely identifies itself.
+
+rotate(axis,dist,dir)
+axis - 3 values (x,y,z)
+dist - 3 values (1,2,3)
+dir - 2 values (clock, anti-clock)
+
+according to above argument Cube class decide which faces and 
+which lines should be operated/changed by rotate operation
