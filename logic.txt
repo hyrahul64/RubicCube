@@ -33,3 +33,20 @@ corner cube has 3 side painted, edge cube has 2 sid paited, center cube has 1 si
 when we rotate one face of rubic cube, total 8 cube changes position
 
 we have 16 vertices in each face
+
+
+----------------------------------------------------------
+state1 ->ratate-> state2
+check for winning condition
+if not iterate above steps.
+
+after n number of rotation(from set of 18 types of roations) cubic goes into final state.
+where each face has same color on it.
+
+rotation type along x,y,z in clock-anticlock wise
+
+2*3*3 rotation possible = 18 operation max
+
+we have to define data structure for state such that applying operation
+on it is easy and put it in another state.
+
