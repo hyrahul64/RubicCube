@@ -124,3 +124,54 @@ public:
 
 private:	
 	int m_arrCubeElement[6][3][3];
+	
+-----------------------------------------------------------------------------------
+ roataiton operation can be performed by
+ 1.	taking help of RubicLine class and overloding >> and = operation
+ 2.	Without help of any class simply by taking another tempoarary array 6*3*3
+ 	and assigning cube's element individually. It is easy but we may need to 
+ 	perform 12+12 = 24 assignment operation.looks clumsy.
+ 	
+ Class RubicLine
+ 
+ private:
+ 	int *i1;
+ 	int *i2;
+ 	int *i3;
+ 	
+ public:
+ 	RubicLine(int* pa, int* pb, int* pc)
+ 	{
+ 		i1=pa;i2=pb;i3=pc;
+ 	}
+	RubicLine(int a, int b, int c)
+	{
+		i1 = new Integer(a);
+		i2 = new Integer(b);
+		i3 = new Integer(c);
+	}
+	RubicLine(RubicLine& rl)
+	{
+		warning(why do we need this??);
+	}
+	RubicLine & operator = (RubicLine& rl)
+	{
+		warning(why do we need this??);
+	}
+	RubicLine()
+	{
+		i1 = new Integer(-1);
+		i2 = new Integer(-1);
+		i3 = new Integer(-1);
+	}
+	RubicLine operator >> (RubicLine& rl)
+	{
+		//reference in arg is correct???
+		//return temp is correct??
+		// What I do to accomplish is 
+		//l1>>l2>>l3>>l4>>l1 (cyclic rotation)
+	
+		RubicLine temp(rl.i1,rl.i2,rl.i3);
+		rl.i1=i1;rl.i2=i2;rl.i3-i3;
+		return temp;
+	}
