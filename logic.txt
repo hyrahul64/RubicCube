@@ -6,7 +6,7 @@ array of colors:{1,2,3,4,5,6}
 	5	pink
 	6	black
 
-array of faces:
+array vertices of faces:
 {
 	//front face
 	{0,0,0},{1,0,0},{2,0,0},
