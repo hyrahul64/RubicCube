@@ -1,4 +1,5 @@
 Create a cube with different color each face.
 Make Cube Rotable on user input.
+Draw RubicCube
 Make Rubic cube i.e each face can be roatated.
 Implemnt logic
