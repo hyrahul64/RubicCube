@@ -1,3 +1,14 @@
 Normal cube with 6 different color has been drawn in windows 8
 
 draw  rubic cube i.e 9 colors on each face
+
+for each square we have to store 4 vertices. So 9*4= 36 
+and for whole cube 36*6=216 vertices.
+
+or we dont consider connected/common vertices, count will be 46.
+
+Question is with this count(=46) can we draw rubic cube?
+
+At any time maximum 3 faces visible and so we have to draw 9*3*2=54 triagle at any time.
+
+Also implement mouse interaction to rotate whole cube.
