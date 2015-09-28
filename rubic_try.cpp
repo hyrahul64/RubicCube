@@ -10,4 +10,7 @@ int main()
 	RubicCube rb;
 	rb.InitializeCube();
 	rb.TraceCube();
+	rb.Display2D();
+//	Rubic2D display;
+//	display << rb;
 }
